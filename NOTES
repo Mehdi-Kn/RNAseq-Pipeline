@@ -1,1 +1,35 @@
+# NOTES.md
 
+## Tips and Tricks
+
+1. **Quality Thresholds:**
+   - Start with a quality threshold of 20 when trimming reads. Adjust based on QC reports to balance read retention and quality.
+
+2. **Sample Naming:**
+   - Use consistent and descriptive filenames for your FASTQ files to easily track samples throughout the pipeline.
+
+3. **Reference Genome:**
+   - Ensure that the reference genome and annotation files match (e.g., version and species) to avoid alignment and counting errors.
+
+4. **Parallel Processing:**
+   - Utilize multiple threads (`nthreads`) in alignment and quantification steps to speed up processing, especially on multi-core systems.
+
+5. **Error Checking:**
+   - After each step, verify the output files exist and contain expected data to catch issues early.
+
+6. **Visualization:**
+   - Always visualize QC reports and normalized counts to ensure data integrity before proceeding to the next steps.
+
+7. **Backup Configuration:**
+   - Keep a separate configuration file for parameters like directories and thresholds to easily modify settings without altering scripts.
+
+8. **Documentation:**
+   - Comment your scripts clearly to remember the purpose of each section, making it easier for others (and future you) to understand the workflow.
+
+9. **Modular Scripts:**
+   - Keep scripts modular to allow running specific steps independently, facilitating troubleshooting and flexible analyses.
+
+10. **Regular Updates:**
+    - Periodically update your packages and reference data to incorporate the latest improvements and annotations.
+
+---
