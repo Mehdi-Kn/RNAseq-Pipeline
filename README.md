@@ -1,6 +1,6 @@
 # RNA-Seq Pipeline in R
 
-Welcome to my **RNA-Seq Pipeline**! 🎉 This pipeline is designed to take you from raw sequencing data all the way to biological insights using R. It's streamlined, easy to use, and packed with tips and tricks to make your life easier. Inspired by the nf-core standards, this pipeline ensures high-quality, reproducible results.
+Welcome to my **RNA-Seq Pipeline**! :) This pipeline is designed to take you from raw sequencing data all the way to biological insights using R. It's streamlined, easy to use, and packed with tips and tricks to make your life easier. Inspired by the nf-core standards, this pipeline ensures high-quality, reproducible results.
 
 ## Table of Contents
 
@@ -223,4 +223,3 @@ Email: [m.knidiri70@gmail.com](mailto:your.email@example.com)
 By following this guide and utilizing the provided scripts, you can establish a robust RNA-Seq pipeline tailored to your research needs. Keep experimenting, and feel free to tweak the scripts to better fit your workflow!
 
 🧬✨
-```
