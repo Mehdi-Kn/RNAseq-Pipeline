@@ -1,4 +1,3 @@
-```markdown
 # RNA-Seq Pipeline in R
 
 Welcome to my **RNA-Seq Pipeline**! 🎉 This pipeline is designed to take you from raw sequencing data all the way to biological insights using R. It's streamlined, easy to use, and packed with tips and tricks to make your life easier. Inspired by the nf-core standards, this pipeline ensures high-quality, reproducible results.
@@ -210,7 +209,7 @@ This project is licensed under the [MIT License](LICENSE).
 For questions, suggestions, or contributions, please reach out to:
 
 **Mehdi-kn**  
-Email: [your.email@example.com](mailto:your.email@example.com)
+Email: [m.knidiri70@gmail.com](mailto:your.email@example.com)
 
 ---
 
