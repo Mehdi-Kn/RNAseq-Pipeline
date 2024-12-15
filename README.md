@@ -1,6 +1,7 @@
+```markdown
 # RNA-Seq Pipeline in R
 
-Welcome to my **RNA-Seq Pipeline**! :) This pipeline is designed to take you from raw sequencing data all the way to biological insights using R. It's streamlined, easy to use, and packed with tips and tricks to make your life easier. Inspired by the nf-core standards, this pipeline ensures high-quality, reproducible results.
+Welcome to my **RNA-Seq Pipeline**! 🎉 This pipeline is designed to take you from raw sequencing data all the way to biological insights using R. It's streamlined, easy to use, and packed with tips and tricks to make your life easier. Inspired by the nf-core standards, this pipeline ensures high-quality, reproducible results.
 
 ## Table of Contents
 
@@ -128,3 +129,99 @@ Customize your plots with different themes to match your presentation style and 
    ```bash
    git clone https://github.com/Mehdi-kn/RNAseq-Pipeline.git
    cd RNAseq-Pipeline
+   ```
+
+2. **Prepare Your Data:**
+
+   - Place your raw FASTQ files in the `data/raw/` directory.
+   - Ensure you have a reference genome (`genome.fa`) and annotation file (`annotation.gtf`) in the `reference/` directory.
+
+3. **Install R and Required Packages:**
+
+   Make sure you have R installed (version 4.0 or higher). Open R and run:
+
+   ```r
+   install.packages("BiocManager")
+   BiocManager::install(c("fastqcr", "ShortRead", "Rsubread", "DESeq2", "clusterProfiler", "org.Hs.eg.db"))
+   ```
+
+4. **Run the Pipeline Scripts:**
+
+   Execute each script in the `scripts/` directory in the following order:
+
+   ```bash
+   Rscript scripts/01_qc.R
+   Rscript scripts/02_trimming.R
+   Rscript scripts/03_alignment.R
+   Rscript scripts/04_quantification.R
+   Rscript scripts/05_normalization.R
+   Rscript scripts/06_differential_expression.R
+   Rscript scripts/07_functional_analysis.R
+   ```
+
+   Alternatively, you can source the scripts within an R session:
+
+   ```r
+   source("scripts/01_qc.R")
+   source("scripts/02_trimming.R")
+   # ... and so on
+   ```
+
+5. **Review Results:**
+
+   - **QC Reports:** `results/qc_reports/`
+   - **Aligned BAM Files:** `results/alignment/`
+   - **Count Matrices:** `results/counts/`
+   - **Differential Expression Results:** `results/differential_expression/`
+   - **Functional Analysis Results and Plots:** `results/functional_analysis/`
+
+---
+
+## Dependencies
+
+- **R (>= 4.0)**
+- **Bioconductor Packages:**
+  - `fastqcr`
+  - `ShortRead`
+  - `Rsubread`
+  - `DESeq2`
+  - `clusterProfiler`
+  - `org.Hs.eg.db` *(Replace with appropriate organism package if necessary)*
+
+- **External Tools:**
+  - **FastQC:** For initial quality control (automated via `fastqcr` package)
+  - **Bowtie2/SAMtools:** Optional, used internally by `Rsubread` for alignment
+
+**Installation Notes:**
+
+- Ensure that external tools like FastQC, Bowtie2, and SAMtools are installed and accessible in your system's PATH if you choose to run them outside of R.
+- The provided R scripts utilize packages that interface with these tools, simplifying the installation process.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Contact
+
+For questions, suggestions, or contributions, please reach out to:
+
+**Mehdi-kn**  
+Email: [your.email@example.com](mailto:your.email@example.com)
+
+---
+
+# Final Notes
+
+- **Customization:** Adjust sample information and thresholds based on your experimental design and specific needs.
+- **Organism:** Ensure you use the correct organism annotation package (e.g., `org.Mm.eg.db` for mouse) in the functional analysis step.
+- **Error Handling:** For a more robust pipeline, consider adding error checks and handling unexpected issues gracefully.
+- **Further Enhancements:** You can expand the pipeline to include additional analyses like pathway enrichment, alternative splicing, or integration with other omics data.
+
+By following this guide and utilizing the provided scripts, you can establish a robust RNA-Seq pipeline tailored to your research needs. Keep experimenting, and feel free to tweak the scripts to better fit your workflow!
+
+🧬✨
+```
